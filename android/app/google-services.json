@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "81008025909",
+    "project_id": "favsongs-1cf73",
+    "storage_bucket": "favsongs-1cf73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81008025909:android:2f454ca4aecd1bf05f2c7c",
+        "android_client_info": {
+          "package_name": "com.example.songs_play"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyx0m3wFcHs5J8KUK0GSBVmq5YEP_bX6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
