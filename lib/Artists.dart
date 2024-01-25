@@ -43,11 +43,33 @@ class Artists extends StatelessWidget {
                 ),
             ),
             ),
+
             SizedBox(height: 20),
+
             ElevatedButton(
               onPressed: (){},
-              child: null,
-            )
+              style: ButtonStyle(
+                minimumSize: MaterialStateProperty.all(Size(100, 40)),
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                shape: MaterialStateProperty.all<OutlinedBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(2.0), // Set the circular radius to 0.0 for sharp edges
+                  ),
+                ),
+
+                // Change the color to your desired color
+              ),
+              child: Text(
+                "new",
+                style: TextStyle(
+                  fontSize: 20
+                ),
+              ),
+
+            ) ,
+            SizedBox(height: 20),
+
+
           ],
         ),
       ),
