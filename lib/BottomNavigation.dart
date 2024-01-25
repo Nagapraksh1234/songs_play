@@ -13,7 +13,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
     return Theme(
       data: ThemeData(
         canvasColor: Colors.black,
-        // Set the canvas background color to black
       ),
       child: BottomNavigationBar(
         currentIndex: _selectedIndex,
