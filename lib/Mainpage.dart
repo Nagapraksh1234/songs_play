@@ -5,6 +5,8 @@ import 'package:songs_play/BottomNavigation.dart';
 import 'package:songs_play/Settings.dart';
 import 'package:songs_play/NewSongs.dart';
 
+import 'Search_items_bar.dart';
+
 
 class Mainpage extends StatelessWidget {
   @override
@@ -43,10 +45,11 @@ class Mainpage extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Settings()),
+                            MaterialPageRoute(builder: (context) => Search_items_bar ()),
                           );
                         },
                       ),
+
                       SizedBox(width: 4),
                       IconButton(
                         icon: Icon(Icons.settings),
@@ -201,3 +204,4 @@ class Mainpage extends StatelessWidget {
     );
   }
 }
+
