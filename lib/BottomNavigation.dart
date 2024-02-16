@@ -28,6 +28,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
               color: _selectedIndex == 0 ? Colors.white : Colors.grey,
             ),
             label: 'Home',
+
+
           ),
           BottomNavigationBarItem(
             icon: Icon(

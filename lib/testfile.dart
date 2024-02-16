@@ -4,28 +4,27 @@ import 'package:songs_play/Artists.dart';
 import 'package:songs_play/BottomNavigation.dart';
 import 'package:songs_play/Settings.dart';
 import 'package:songs_play/NewSongs.dart';
-import 'package:songs_play/SignUp.dart';
 
 import 'Search_items_bar.dart';
 
-
 class Mainpage extends StatelessWidget {
-  String getGreeting(){
+  String getGreeting() {
     DateTime now = DateTime.now();
-    int hour  = now.hour;
-    if ( hour >=0 && hour < 12 ) {
+    int hour = now.hour;
+
+    if (hour >= 0 && hour < 12) {
       return 'Good Morning';
-    } else if (hour >= 12 && hour < 16){
+    } else if (hour >= 12 && hour < 16) {
       return 'Good Afternoon';
-    } else if (hour >= 16 && hour < 20){
+    } else {
       return 'Good Evening';
-    } else{
-      return 'Sleep well gn';
     }
   }
+
   @override
   Widget build(BuildContext context) {
     String greeting = getGreeting();
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -46,7 +45,7 @@ class Mainpage extends StatelessWidget {
                   child: Row(
                     children: [
                       Text(
-                        'Hello, $greeting!',
+                        'Hello, $greeting!', // Use the dynamic greeting
                         style: TextStyle(
                           fontSize: 24,
                           color: Colors.white,
@@ -60,19 +59,18 @@ class Mainpage extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Search_items_bar ()),
+                            MaterialPageRoute(builder: (context) => Search_items_bar()),
                           );
                         },
                       ),
-
-                      SizedBox(width: 1),
+                      SizedBox(width: 4),
                       IconButton(
-                        icon: Icon(Icons.person),
+                        icon: Icon(Icons.settings),
                         color: Colors.white,
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => SignUp()),
+                            MaterialPageRoute(builder: (context) => Settings()),
                           );
                         },
                       ),
@@ -202,7 +200,6 @@ class Mainpage extends StatelessWidget {
                                   height: 200,
                                   fit: BoxFit.cover,
                                 ),
-
                               ),
                             ),
                           ),
@@ -219,4 +216,3 @@ class Mainpage extends StatelessWidget {
     );
   }
 }
-

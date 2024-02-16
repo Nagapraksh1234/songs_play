@@ -9,11 +9,13 @@ class Artists extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text(
           "Singer Name",
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 25,
+            color: Colors.white,
           ),
         ),
       ),
@@ -41,35 +43,60 @@ class Artists extends StatelessWidget {
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
+              ),
             ),
-            ),
-
             SizedBox(height: 20),
 
-            ElevatedButton(
-              onPressed: (){},
-              style: ButtonStyle(
-                minimumSize: MaterialStateProperty.all(Size(100, 40)),
-                backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                shape: MaterialStateProperty.all<OutlinedBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(2.0), // Set the circular radius to 0.0 for sharp edges
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Adjust this as needed
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                    minimumSize: MaterialStateProperty.all(Size(150, 40)),
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.grey),
+                    shape: MaterialStateProperty.all<OutlinedBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(2.0),
+                      ),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      "Saved Songs",
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.white,
+                      ),
+                    ),
                   ),
                 ),
-
-                // Change the color to your desired color
-              ),
-              child: Text(
-                "new",
-                style: TextStyle(
-                  fontSize: 20
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                    minimumSize: MaterialStateProperty.all(Size(150, 40)),
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.grey),
+                    shape: MaterialStateProperty.all<OutlinedBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(2.0),
+                      ),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      "Play",
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-
-            ) ,
-            SizedBox(height: 20),
-
-
+                SizedBox(height: 5),
+                ],
+            ),
           ],
         ),
       ),
