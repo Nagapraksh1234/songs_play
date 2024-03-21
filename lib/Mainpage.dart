@@ -53,7 +53,7 @@ class Mainpage extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(width: 5),
+                      SizedBox(width: 1),
                       IconButton(
                         icon: Icon(Icons.search),
                         color: Colors.white,
@@ -65,7 +65,7 @@ class Mainpage extends StatelessWidget {
                         },
                       ),
 
-                      SizedBox(width: 1),
+                      SizedBox(width: 0),
                       IconButton(
                         icon: Icon(Icons.person),
                         color: Colors.white,
